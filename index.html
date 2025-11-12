@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomás Milgron</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bone: '#F5F1E8',
+                        charcoal: '#2C2C2C'
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-bone text-charcoal font-serif">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-bone/95 backdrop-blur-sm border-b border-charcoal/10 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#inicio" class="text-xl font-bold hover:opacity-70 transition-opacity">TM</a>
+            <div class="space-x-8 text-sm">
+                <a href="#inicio" class="hover:opacity-70 transition-opacity">Inicio</a>
+                <a href="#blog" class="hover:opacity-70 transition-opacity">Blog</a>
+                <a href="#contacto" class="hover:opacity-70 transition-opacity">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="min-h-screen flex items-center justify-center px-6">
+        <div class="text-center fade-in">
+            <h1 class="text-6xl md:text-8xl font-bold mb-4">Tomás Milgron</h1>
+            <p class="text-xl md:text-2xl text-charcoal/70 font-light">Escritor</p>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="min-h-screen py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-16 fade-in delay-1">Blog</h2>
+            
+            <article class="border-t border-charcoal/20 pt-12 fade-in delay-2">
+                <a href="#post-1" class="group block">
+                    <time class="text-sm text-charcoal/60 mb-3 block">15 de enero, 2025</time>
+                    <h3 class="text-3xl font-bold mb-4 group-hover:opacity-70 transition-opacity">Reflexiones sobre la escritura</h3>
+                    <p class="text-lg text-charcoal/80 leading-relaxed mb-6">
+                        La escritura es un acto de resistencia contra el olvido. Cada palabra que ponemos en el papel es un intento de capturar algo efímero, de darle forma a lo que de otro modo se perdería en el tiempo.
+                    </p>
+                    <span class="text-sm font-bold group-hover:underline">Leer más →</span>
+                </a>
+            </article>
+
+            <!-- Modal/Full Post (Hidden by default) -->
+            <div id="post-1" class="hidden fixed inset-0 bg-bone z-50 overflow-y-auto">
+                <div class="max-w-3xl mx-auto px-6 py-24">
+                    <a href="#blog" class="inline-block mb-8 text-sm hover:underline">← Volver al blog</a>
+                    <time class="text-sm text-charcoal/60 mb-3 block">15 de enero, 2025</time>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-8">Reflexiones sobre la escritura</h1>
+                    <div class="prose prose-lg max-w-none text-charcoal/90 leading-relaxed space-y-6">
+                        <p>
+                            La escritura es un acto de resistencia contra el olvido. Cada palabra que ponemos en el papel es un intento de capturar algo efímero, de darle forma a lo que de otro modo se perdería en el tiempo.
+                        </p>
+                        <p>
+                            Escribir es también un diálogo con uno mismo. En la soledad del proceso creativo, nos enfrentamos a nuestras propias contradicciones, a nuestros miedos y esperanzas. La página en blanco no juzga, simplemente espera.
+                        </p>
+                        <p>
+                            He aprendido que la disciplina es más importante que la inspiración. La musa no llega cuando la llamamos, pero si nos sentamos cada día frente a la página, eventualmente aparece. A veces trae regalos, otras veces solo silencio. Ambos son valiosos.
+                        </p>
+                        <p>
+                            La literatura nos permite vivir múltiples vidas. Como escritor, puedo ser todos mis personajes y ninguno a la vez. Puedo explorar mundos que nunca visitaré, sentir emociones que no son mías, pensar pensamientos que me son ajenos.
+                        </p>
+                        <p>
+                            Y sin embargo, todo lo que escribo es profundamente personal. Cada historia lleva fragmentos de mi experiencia, de mis observaciones, de mis preguntas sin respuesta. La ficción es una forma de verdad disfrazada.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="min-h-screen flex items-center justify-center px-6 py-24">
+        <div class="text-center max-w-2xl fade-in delay-3">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8">Contacto</h2>
+            <p class="text-xl text-charcoal/70 mb-8">
+                Para consultas profesionales o colaboraciones
+            </p>
+            <a href="mailto:tomas@milgron.com" class="text-2xl font-bold hover:opacity-70 transition-opacity">
+                tomas@milgron.com
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-charcoal/20 py-8 px-6 text-center text-sm text-charcoal/60">
+        <p>&copy; 2025 Tomás Milgron. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Show/hide blog post modal
+        if (window.location.hash === '#post-1') {
+            document.getElementById('post-1').classList.remove('hidden');
+        }
+        
+        window.addEventListener('hashchange', function() {
+            const post = document.getElementById('post-1');
+            if (window.location.hash === '#post-1') {
+                post.classList.remove('hidden');
+            } else {
+                post.classList.add('hidden');
+            }
+        });
+
+        // Fade in elements on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
