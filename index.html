@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomás Milgron</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; }
+        .fade-in { animation: fadeIn 1.2s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .delay-1 { animation-delay: 0.2s; opacity: 0; animation-fill-mode: forwards; }
+        .delay-2 { animation-delay: 0.4s; opacity: 0; animation-fill-mode: forwards; }
+        .delay-3 { animation-delay: 0.6s; opacity: 0; animation-fill-mode: forwards; }
+        a { transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-6">
+        <div class="text-center max-w-4xl">
+            <h1 class="text-7xl md:text-9xl font-bold mb-6 fade-in" style="font-family: 'Playfair Display', serif;">
+                Tomás Milgron
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 font-light fade-in delay-1">
+                Escritor
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center" style="font-family: 'Playfair Display', serif;">
+                Blog
+            </h2>
+            
+            <article class="bg-white p-8 md:p-12 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <time class="text-sm text-gray-500 font-light">15 de enero, 2025</time>
+                <h3 class="text-3xl font-bold mt-3 mb-4" style="font-family: 'Playfair Display', serif;">
+                    Reflexiones sobre la escritura
+                </h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    La escritura es un acto de resistencia. En un mundo saturado de ruido y distracción, sentarse a escribir es elegir la quietud, el silencio necesario para que las palabras encuentren su forma.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Cada frase es una decisión, cada párrafo un compromiso con la verdad que buscamos expresar. No se trata de llenar páginas, sino de encontrar las palabras exactas que capturen aquello que apenas podemos nombrar.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    Escribir es, en esencia, un acto de fe: la creencia de que nuestras palabras pueden tocar a alguien, resonar en otra conciencia, crear un puente entre dos soledades.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8" style="font-family: 'Playfair Display', serif;">
+                Contacto
+            </h2>
+            <a href="mailto:tomas@milgron.com" class="text-xl md:text-2xl text-gray-700 hover:text-gray-900 underline decoration-1 underline-offset-4">
+                tomas@milgron.com
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 bg-gray-50 text-center">
+        <p class="text-gray-500 text-sm">
+            © 2025 Tomás Milgron. Todos los derechos reservados.
+        </p>
+    </footer>
+
+</body>
+</html>
